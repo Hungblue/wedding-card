@@ -1,26 +1,220 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--theme-primary);
+  --color-primary-light: var(--theme-primary-light);
+  --color-primary-dark: var(--theme-primary-dark);
+  --color-secondary: var(--theme-secondary);
+  --color-secondary-light: var(--theme-secondary-light);
+  --color-accent: var(--theme-accent);
+  --color-bg: var(--theme-background);
+  --color-bg-alt: var(--theme-background-alt);
+  --color-surface: var(--theme-surface);
+  --color-txt: var(--theme-text);
+  --color-txt-light: var(--theme-text-light);
+  --color-txt-muted: var(--theme-text-muted);
+  --color-border: var(--theme-border);
+
+  --font-serif: var(--font-cormorant), 'Playfair Display', Georgia, serif;
+  --font-script: var(--font-great-vibes), 'Dancing Script', cursive;
+  --font-body: var(--font-inter), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ===== Theme CSS Variables (defaults: romantic) ===== */
+:root {
+  --theme-primary: #d4a0a0;
+  --theme-primary-light: #f0d4d4;
+  --theme-primary-dark: #b07878;
+  --theme-secondary: #c9a96e;
+  --theme-secondary-light: #e8d5a8;
+  --theme-accent: #e8c4c4;
+  --theme-background: #fdf8f8;
+  --theme-background-alt: #fff5f5;
+  --theme-surface: #ffffff;
+  --theme-text: #4a3333;
+  --theme-text-light: #6b5555;
+  --theme-text-muted: #9a8888;
+  --theme-border: #f0d4d4;
+  --theme-overlay: rgba(212, 160, 160, 0.1);
+  --theme-gradient: linear-gradient(135deg, #fdf8f8 0%, #fff0f0 50%, #fdf8f8 100%);
+  --theme-gradient-alt: linear-gradient(135deg, #d4a0a0 0%, #c9a96e 100%);
+}
+
+/* ===== CSS Transitions for smooth theme switching ===== */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+button,
+a,
+input,
+textarea {
+  transition-property: background-color, border-color, color, opacity, transform, box-shadow;
+  transition-duration: 0.3s;
+}
+
+/* ===== Base Styles ===== */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--theme-background);
+  color: var(--theme-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-primary-dark);
+}
+
+/* ===== Selection ===== */
+::selection {
+  background-color: var(--theme-primary-light);
+  color: var(--theme-text);
+}
+
+/* ===== Section Divider ===== */
+.section-divider {
+  width: 80px;
+  height: 2px;
+  background: var(--theme-gradient-alt);
+  margin: 0 auto;
+  border-radius: 1px;
+}
+
+/* ===== Masonry Grid ===== */
+.masonry-grid {
+  columns: 2;
+  column-gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .masonry-grid {
+    columns: 3;
+    column-gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    columns: 4;
+    column-gap: 24px;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .masonry-item {
+    margin-bottom: 20px;
+  }
+}
+
+/* ===== Flip animation for countdown ===== */
+.flip-card {
+  perspective: 400px;
+}
+
+.flip-card-inner {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipping {
+  animation: flipDown 0.6s ease-in-out;
+}
+
+@keyframes flipDown {
+  0% { transform: rotateX(0); }
+  50% { transform: rotateX(-90deg); }
+  100% { transform: rotateX(0); }
+}
+
+/* ===== Timeline line draw ===== */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--theme-primary-light);
+  transform: translateX(-50%);
+}
+
+.timeline-line-progress {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  background: var(--theme-gradient-alt);
+  transform: translateX(-50%);
+  transition: height 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  .timeline-line,
+  .timeline-line-progress {
+    left: 20px;
+  }
+}
+
+/* ===== Lightbox ===== */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Floating elements ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  50% { transform: translateY(-20px) rotate(10deg); opacity: 0.8; }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  33% { transform: translateY(-15px) translateX(10px); }
+  66% { transform: translateY(-5px) translateX(-10px); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
 }
