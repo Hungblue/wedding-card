@@ -3,8 +3,8 @@ import { WeddingData } from '@/types';
 export const weddingData: WeddingData = {
   couple: {
     bride: {
-      name: 'Thùy Nga',
-      fullName: 'Bùi Thùy Nga',
+      name: 'Thúy Nga',
+      fullName: 'Bùi Thị Thúy Nga',
       role: 'bride',
       image: '/images/couple/bride.jpg',
       bio: 'Một cô gái yêu hoa, yêu nấu ăn và luôn mỉm cười. Cô ấy tin rằng tình yêu đích thực sẽ đến khi ta không tìm kiếm.',
@@ -58,16 +58,16 @@ export const weddingData: WeddingData = {
 
   events: [
     {
-      title: 'Lễ Thành Hôn',
+      title: 'Lễ Vu Quy',
       date: '2026-03-28',
       time: 'Thứ Bảy',
-      venue: 'Tư gia nhà trai',
-      address: 'Xóm Đình, Thôn Ba Du, Xã Dân Hòa, Thành phố Hà Nội',
-      mapUrl: 'https://maps.google.com/?q=Xã+Dân+Hòa,+Hà+Nội',
+      venue: 'Tư gia nhà gái',
+      address: 'Thôn Chanh Thượng, Xã Thanh Bình, Tỉnh Ninh Bình',
+      mapUrl: 'https://maps.google.com/?q=Xã+Thanh+Bình,+Ninh+Bình',
       image: '/images/events/ceremony.jpg',
     },
     {
-      title: 'Tiệc Mừng Cưới',
+      title: 'Lễ Thành Hôn',
       date: '2026-03-28',
       time: 'Thứ Bảy',
       venue: 'Tư gia nhà trai',
@@ -87,7 +87,7 @@ export const weddingData: WeddingData = {
     {
       bankName: 'Techcombank',
       accountNumber: '0987654321',
-      accountHolder: 'BUI THUY NGA',
+      accountHolder: 'BUI THT THUY NGA',
       label: 'Nhà Gái',
     },
   ],
