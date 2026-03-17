@@ -55,14 +55,27 @@ export default function HeroSection() {
         style={{ y: backgroundY }}
       >
         {weddingData.heroImage ? (
-          <Image
-            src={weddingData.heroImage}
-            alt="Wedding cover"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
+          <>
+            {/* Blurred background fill to avoid blank edges */}
+            <Image
+              src={weddingData.heroImage}
+              alt=""
+              fill
+              className="object-cover blur-2xl scale-110"
+              priority
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            {/* Main sharp image - contain so nothing is cropped */}
+            <Image
+              src={weddingData.heroImage}
+              alt="Wedding cover"
+              fill
+              className="object-contain"
+              priority
+              sizes="100vw"
+            />
+          </>
         ) : (
           <div
             className="absolute inset-0"

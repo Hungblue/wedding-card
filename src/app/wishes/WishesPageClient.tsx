@@ -24,7 +24,7 @@ export default function WishesPageClient({ initialWishes }: Props) {
             Về trang chủ
           </Link>
           <span className="font-script text-xl text-primary sm:text-2xl">
-            Nam & B
+            Nam & Nga
           </span>
         </div>
       </header>

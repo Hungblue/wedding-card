@@ -5,7 +5,7 @@ import WeddingEvents from "@/components/sections/WeddingEvents";
 import CountdownTimer from "@/components/sections/CountdownTimer";
 import PhotoGallery from "@/components/sections/PhotoGallery";
 import Guestbook from "@/components/sections/Guestbook";
-import QRCodeSection from "@/components/sections/QRCodeSection";
+
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import ClientOverlays from "@/components/layout/ClientOverlays";
@@ -22,7 +22,6 @@ export default function Home() {
         <CountdownTimer />
         <PhotoGallery />
         <Guestbook />
-        <QRCodeSection />
       </main>
       <Footer />
       <ClientOverlays />

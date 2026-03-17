@@ -21,12 +21,12 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  title: "Nam & B - Wedding Invitation",
+  title: "Nam & Nga - Wedding Invitation",
   description:
-    "Thiệp mời đám cưới Văn Name & B - 15/05/2026. Chúng mình trân trọng kính mời bạn đến chung vui trong ngày trọng đại.",
-  keywords: ["wedding", "thiệp cưới", "Name & B", "đám cưới"],
+    "Thiệp mời đám cưới Văn Nam & Thùy Nga - 28/03/2026. Trân trọng kính mời bạn đến chung vui trong ngày trọng đại.",
+  keywords: ["wedding", "thiệp cưới", "Nam & Nga", "đám cưới"],
   openGraph: {
-    title: "Nam & B - Wedding Invitation",
+    title: "Nam & Nga - Wedding Invitation",
     description: "Trân trọng kính mời bạn đến chung vui trong ngày trọng đại của chúng mình.",
     type: "website",
   },

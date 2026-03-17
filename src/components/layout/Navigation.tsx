@@ -17,14 +17,13 @@ const navLinks: NavLink[] = [
   { label: 'Đếm ngược', sectionId: 'countdown' },
   { label: 'Album ảnh', sectionId: 'gallery' },
   { label: 'Lời chúc', sectionId: 'guestbook' },
-  { label: 'Mừng cưới', sectionId: 'qrcode' },
 ];
 
 interface NavigationProps {
   coupleNames?: string;
 }
 
-export default function Navigation({ coupleNames = 'Nam & B' }: NavigationProps) {
+export default function Navigation({ coupleNames = 'Nam & Nga' }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');

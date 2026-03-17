@@ -3,7 +3,7 @@ import { getWishes } from '@/lib/google-sheets';
 import WishesPageClient from './WishesPageClient';
 
 export const metadata: Metadata = {
-  title: 'Lời Chúc - Nam & B Wedding',
+  title: 'Lời Chúc - Nam & Nga Wedding',
   description: 'Tất cả lời chúc từ khách mời gửi đến cặp đôi',
 };
 

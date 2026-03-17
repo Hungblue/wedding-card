@@ -21,7 +21,7 @@ export default function Footer() {
         </button>
 
         {/* Hashtag */}
-        <p className="font-script text-2xl text-primary">#TuanHaWedding</p>
+        <p className="font-script text-2xl text-primary">#NamNgaWedding</p>
 
         {/* Made with love */}
         <p className="flex items-center gap-1.5 text-sm text-txt-muted">
