@@ -6,7 +6,7 @@ export const weddingData: WeddingData = {
       name: 'Thúy Nga',
       fullName: 'Bùi Thị Thúy Nga',
       role: 'bride',
-      image: '/images/couple/bride.jpg',
+      image: '/images/couple/IMG_6107.JPG',
       bio: 'Một cô gái yêu hoa, yêu nấu ăn và luôn mỉm cười. Cô ấy tin rằng tình yêu đích thực sẽ đến khi ta không tìm kiếm.',
       fatherName: 'Ông Bùi Văn Ngọc',
       motherName: 'Bà Phạm Thị Hằng',
@@ -15,7 +15,7 @@ export const weddingData: WeddingData = {
       name: 'Văn Nam',
       fullName: 'Nguyễn Văn Nam',
       role: 'groom',
-      image: '/images/couple/groom.jpg',
+      image: '/images/couple/IMG_6108.JPG',
       bio: 'Chàng trai đam mê công nghệ nhưng lại bị chinh phục bởi nụ cười của cô ấy. Anh tin rằng gặp được đúng người là phép màu lớn nhất.',
       fatherName: 'Ông Nguyễn Văn Kiểm',
       motherName: 'Bà Nguyễn Thị Thu Hương',
@@ -71,7 +71,7 @@ export const weddingData: WeddingData = {
       date: '2026-03-28',
       time: 'Thứ Bảy',
       venue: 'Tư gia nhà trai',
-      address: 'Xóm Đình, Thôn Ba Du, Xã Dân Hòa, Thành phố Hà Nội',
+      address: 'Xóm Đình, Thôn Ba Dư, Xã Dân Hòa, Thành phố Hà Nội',
       mapUrl: 'https://maps.google.com/?q=Xã+Dân+Hòa,+Hà+Nội',
       image: '/images/events/reception.jpg',
     },
@@ -92,7 +92,7 @@ export const weddingData: WeddingData = {
     },
   ],
 
-  heroImage: '/images/hero/cover.jpg',
+  heroImage: '/images/hero/cover-2.jpg',
 
   gallery: [
     '/images/gallery/photo-1.jpg',

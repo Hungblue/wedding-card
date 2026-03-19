@@ -65,20 +65,6 @@ function PersonCard({
       <p className="font-body mb-6 max-w-xs text-sm leading-relaxed text-txt-light sm:text-base">
         {person.bio}
       </p>
-
-      {/* Parents */}
-      <div className="rounded-lg border border-border bg-surface/60 px-6 py-4 backdrop-blur-sm">
-        <p className="font-body mb-1 text-xs uppercase tracking-widest text-txt-muted">
-          Con của
-        </p>
-        <p className="font-serif text-sm text-txt sm:text-base">
-          {person.fatherName}
-        </p>
-        <span className="font-body text-xs text-txt-muted">&</span>
-        <p className="font-serif text-sm text-txt sm:text-base">
-          {person.motherName}
-        </p>
-      </div>
     </AnimatedSection>
   );
 }

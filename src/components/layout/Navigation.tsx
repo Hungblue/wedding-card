@@ -12,7 +12,6 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { label: 'Trang chủ', sectionId: 'hero' },
   { label: 'Cặp đôi', sectionId: 'couple' },
-  { label: 'Chuyện tình yêu', sectionId: 'timeline' },
   { label: 'Sự kiện', sectionId: 'events' },
   { label: 'Đếm ngược', sectionId: 'countdown' },
   { label: 'Album ảnh', sectionId: 'gallery' },

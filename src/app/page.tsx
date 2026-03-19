@@ -1,6 +1,5 @@
 import HeroSection from "@/components/sections/HeroSection";
 import CoupleIntro from "@/components/sections/CoupleIntro";
-import LoveTimeline from "@/components/sections/LoveTimeline";
 import WeddingEvents from "@/components/sections/WeddingEvents";
 import CountdownTimer from "@/components/sections/CountdownTimer";
 import PhotoGallery from "@/components/sections/PhotoGallery";
@@ -17,7 +16,6 @@ export default function Home() {
       <main>
         <HeroSection />
         <CoupleIntro />
-        <LoveTimeline />
         <WeddingEvents />
         <CountdownTimer />
         <PhotoGallery />
